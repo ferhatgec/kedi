@@ -28,6 +28,7 @@ public:
         delete Tree;
     }
 
+
     void Read(std::string filename) noexcept {
         std::ifstream kedi_input(filename);
 
@@ -39,6 +40,21 @@ public:
             init = tokenizer.Tokenize(data);
 
             if(data.length() == 0) continue;
+
+            tokenizer.MatchTokens(init, Tree);
+        }
+    }
+
+    void ReadStr(std::string str_data) noexcept {
+        std::istringstream kedi_input(str_data);
+
+        Kedi_Tokenizer   tokenizer;
+        kedi_keywords_t  init;
+
+        for(std::string _data; std::getline(kedi_input, _data);) {
+            init = tokenizer.Tokenize(_data);
+
+            if(_data.length() == 0) continue;
 
             tokenizer.MatchTokens(init, Tree);
         }
