@@ -1,0 +1,10 @@
+[project
+    =name 'My Project'
+    =version '0.1'
+    =language 'C++'
+
+    [libs
+        =kedi '0.1'
+        =clang '11.0.0-2'
+    ]
+]
