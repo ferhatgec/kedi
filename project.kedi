@@ -1,3 +1,7 @@
+@globalenv
+    $USER
+@
+
 [PROJECT
     =name 'Fegeya Kedi'
     =author 'Ferhat Gecdogan'
@@ -7,5 +11,7 @@
 
     [INFO
         =tree 'Kedi uses categoried single-node data interface tree implementation'
+
+        =user $USER
     ]
 ]

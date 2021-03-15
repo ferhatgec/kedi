@@ -1,0 +1,11 @@
+@globalenv
+    $USER
+    $PWD
+    $SHELL
+@
+
+[USER
+    =username $USER
+    =path $PWD
+    =shell $SHELL
+]
